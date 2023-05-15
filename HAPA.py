@@ -82,27 +82,10 @@ def prediction(age,sex,cp,trestbps,restecg,chol,fbs,thalach,exang,oldpeak,slope,
         st.write("You have a lower risk of getting a heart disease!")
 ##Creating the main page
 def main(): 
-    page_bg_img = """ 
-    <style>
-    [data-testid="stAppViewContainer"]
-    {
-        background-image : url("https://thumbs.dreamstime.com/b/purple-petunia-flowers-bed-beautiful-blurred-nature-background-banner-website-garden-concept-54798543.jpg");
-        background-size : cover;
-    }
-    [data-testid="stHeader"]
-    {
-        background-color:rgba(0,0,0,0);
-    }
-    [data-testid="stSidebar"]
-    {
-         background-image : url("https://thumbs.dreamstime.com/b/gentle-white-flowers-blue-blur-background-fresh-spring-wildflowers-outdoors-natural-floral-border-soft-focus-30230948.jpg");
-        background-size : cover;
-    }
-    </style>
-    """
+
     html_temp = """ 
-    <div style ="background-color:rgba(0,0,0,0);padding:13px"> 
-    <h1 style ="color:#9D94E7;text-align:center;">Cardiovascular Disease Prediction </h1> 
+    <div style ="background-color:aliceblue;padding:13px"> 
+    <h1 style ="color:black;text-align:center;">Cardiovascular Disease Prediction </h1> 
     </div> 
     """
 
@@ -110,7 +93,7 @@ def main():
         
     # display the front end aspect
     st.markdown(html_temp, unsafe_allow_html = True)
-    st.markdown(page_bg_img, unsafe_allow_html = True)
+
     # following lines create boxes in which user can enter data required to make prediction
     age=st.selectbox ("Age",range(1,121,1))
     sex = st.radio("Select Gender: ",('male', 'female'))
