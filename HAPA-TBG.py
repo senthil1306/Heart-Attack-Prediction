@@ -1,9 +1,8 @@
-from sklearn.preprocessing import StandardScaler
+#from sklearn.preprocessing import StandardScaler
 import streamlit as st
 import numpy as np
 import pickle as pkl
 from sklearn.preprocessing import MinMaxScaler
-
 
 scal=MinMaxScaler()
 
@@ -12,13 +11,9 @@ with open("RFModel.pkl", 'rb') as file:
     model = pkl.load(file)
 
 
-
-
-
 st.set_page_config(page_title=" Heart Disease Detection App",page_icon="⚕️",layout="centered",initial_sidebar_state="expanded")
 
 #@st.cache()
- 
      
 def prediction(age,sex,cp,trestbps,restecg,chol,fbs,thalach,exang,oldpeak,slope,ca,thal ):   
 
