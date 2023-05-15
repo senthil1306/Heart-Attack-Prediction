@@ -1,10 +1,10 @@
-#from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import StandardScaler
 import streamlit as st
 import numpy as np
 import pickle as pkl
-#from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import MinMaxScaler
 
-#scal=MinMaxScaler()
+scal=MinMaxScaler()
 
 #Load the saved pickle model
 with open("RFModel.pkl", 'rb') as file:

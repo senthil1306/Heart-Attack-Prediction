@@ -11,10 +11,6 @@ scal=MinMaxScaler()
 with open("RFModel.pkl", 'rb') as file:
     model = pkl.load(file)
 
-
-
-
-
 st.set_page_config(page_title=" Heart Disease Detection App",page_icon="⚕️",layout="centered",initial_sidebar_state="expanded")
 
 #@st.cache()
